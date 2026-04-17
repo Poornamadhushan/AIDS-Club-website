@@ -1,0 +1,499 @@
+/* =============================================
+   TEAM PAGE STYLES
+   ============================================= */
+
+.team-page {
+  background: white;
+}
+
+/* Intro Section */
+.intro-section {
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.05) 0%, rgba(124, 58, 237, 0.05) 100%);
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* Team Section */
+.team-section {
+  background: white;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+/* Member Card */
+.member-card {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+  border: 2px solid transparent;
+}
+
+.member-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 15px 40px rgba(124, 58, 237, 0.2);
+  border-color: var(--secondary);
+}
+
+/* Member Image */
+.member-image {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+}
+
+.member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.member-card:hover .member-image img {
+  transform: scale(1.1);
+}
+
+/* Member Overlay */
+.member-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.member-card:hover .member-overlay {
+  opacity: 1;
+}
+
+/* Member Links Overlay */
+.member-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.link-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--secondary), var(--accent));
+  color: white;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  transition: var(--transition);
+  transform: scale(0.8);
+}
+
+.member-overlay .link-btn {
+  animation: popIn 0.3s ease-out forwards;
+}
+
+.member-overlay .link-btn:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.link-btn:hover {
+  transform: scale(1.1);
+}
+
+.link-btn.github {
+  background: linear-gradient(135deg, #333, #555);
+}
+
+.link-btn.github:hover {
+  background: linear-gradient(135deg, #555, #777);
+}
+
+.link-btn.linkedin {
+  background: linear-gradient(135deg, #0077b5, #0094d0);
+}
+
+.link-btn.linkedin:hover {
+  background: linear-gradient(135deg, #0094d0, #00a8e8);
+}
+
+/* Member Info */
+.member-info {
+  padding: 1.75rem;
+}
+
+.member-card h3 {
+  color: var(--primary);
+  font-size: 1.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.member-role {
+  color: var(--secondary);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.75rem;
+}
+
+.member-bio {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+/* Fun Fact */
+.fun-fact {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(6, 182, 212, 0.1));
+  padding: 1rem;
+  border-left: 3px solid var(--secondary);
+  border-radius: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.fact-label {
+  display: block;
+  font-weight: 700;
+  color: var(--secondary);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.35rem;
+}
+
+.fact-text {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Member Social Links in Card */
+.member-social-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  border-top: 1px solid var(--border);
+  padding-top: 1.25rem;
+}
+
+.member-social-links a {
+  flex: 1;
+  padding: 0.6rem;
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(6, 182, 212, 0.1));
+  border: 1px solid var(--secondary);
+  border-radius: 0.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--secondary);
+  transition: var(--transition);
+}
+
+.member-social-links a:hover {
+  background: linear-gradient(135deg, var(--secondary), var(--accent));
+  color: white;
+  border-color: transparent;
+}
+
+/* Stats Section */
+.stats-section {
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.05) 0%, rgba(124, 58, 237, 0.05) 100%);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-top: 4px solid var(--secondary);
+  transition: var(--transition);
+}
+
+.stat-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(124, 58, 237, 0.15);
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+  color: var(--text-light);
+  font-size: 1rem;
+}
+
+/* Values Section */
+.values-section {
+  background: white;
+}
+
+.value-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.value-item i {
+  font-size: 2.5rem;
+  color: var(--secondary);
+}
+
+.value-item h4 {
+  color: var(--primary);
+  margin: 0;
+}
+
+.value-item p {
+  font-size: 0.95rem;
+  color: var(--text-light);
+}
+
+/* Join Team Section */
+.join-team-section {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: white;
+  text-align: center;
+}
+
+.join-team-section h2 {
+  color: white;
+  margin-bottom: 0.75rem;
+}
+
+.join-team-section p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+/* Responsive Team */
+@media (max-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .member-image {
+    height: 280px;
+  }
+
+  .member-info {
+    padding: 1.5rem;
+  }
+
+  .member-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header h1 {
+    font-size: 2rem;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .member-image {
+    height: 250px;
+  }
+
+  .member-info {
+    padding: 1.25rem;
+  }
+
+  .member-card h3 {
+    font-size: 1.15rem;
+  }
+
+  .member-role {
+    font-size: 0.9rem;
+  }
+
+  .member-bio {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+
+  .fun-fact {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .fact-label {
+    font-size: 0.8rem;
+  }
+
+  .fact-text {
+    font-size: 0.85rem;
+  }
+
+  .member-social-links {
+    padding-top: 1rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .stat-item {
+    padding: 1.5rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .value-item {
+    gap: 0.75rem;
+  }
+
+  .value-item i {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .member-image {
+    height: 200px;
+  }
+
+  .member-info {
+    padding: 1rem;
+  }
+
+  .member-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .member-role {
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .member-bio {
+    font-size: 0.8rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .fun-fact {
+    padding: 0.65rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .fact-label {
+    font-size: 0.75rem;
+  }
+
+  .fact-text {
+    font-size: 0.8rem;
+  }
+
+  .member-social-links {
+    gap: 0.5rem;
+    padding-top: 0.75rem;
+  }
+
+  .member-social-links a {
+    font-size: 0.75rem;
+    padding: 0.5rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .stat-item {
+    padding: 1rem;
+  }
+
+  .stat-icon {
+    font-size: 2rem;
+  }
+
+  .stat-number {
+    font-size: 1.75rem;
+  }
+
+  .stat-item p {
+    font-size: 0.9rem;
+  }
+
+  .intro-text {
+    font-size: 0.95rem;
+  }
+
+  .join-team-section h2 {
+    font-size: 1.5rem;
+  }
+
+  section {
+    padding: 2rem 0;
+  }
+}

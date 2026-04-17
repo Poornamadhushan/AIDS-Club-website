@@ -1,0 +1,124 @@
+/* =============================================
+   COUNTDOWN TIMER STYLES
+   ============================================= */
+
+.countdown-container {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
+  border-radius: 1rem;
+  border: 2px solid var(--secondary);
+  margin: 2rem 0;
+}
+
+.countdown-title {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.countdown-timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.countdown-item {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  min-width: 80px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid var(--secondary);
+}
+
+.countdown-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.countdown-label {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+.countdown-separator {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--secondary);
+  margin: 0 0.25rem;
+}
+
+/* Responsive Countdown */
+@media (max-width: 768px) {
+  .countdown-container {
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .countdown-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .countdown-timer {
+    gap: 0.25rem;
+  }
+
+  .countdown-item {
+    min-width: 70px;
+    padding: 0.75rem;
+  }
+
+  .countdown-value {
+    font-size: 1.5rem;
+  }
+
+  .countdown-label {
+    font-size: 0.65rem;
+  }
+
+  .countdown-separator {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .countdown-container {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+
+  .countdown-title {
+    font-size: 1rem;
+  }
+
+  .countdown-item {
+    min-width: 60px;
+    padding: 0.5rem;
+  }
+
+  .countdown-value {
+    font-size: 1.25rem;
+  }
+
+  .countdown-label {
+    font-size: 0.6rem;
+  }
+
+  .countdown-separator {
+    font-size: 1rem;
+    margin: 0;
+  }
+}

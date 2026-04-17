@@ -1,0 +1,497 @@
+/* =============================================
+   ALUMNI PAGE STYLES
+   ============================================= */
+
+.alumni-page {
+  background: white;
+}
+
+/* Intro Section */
+.alumni-page .intro-section {
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.05) 0%, rgba(124, 58, 237, 0.05) 100%);
+}
+
+.intro-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro-content p {
+  font-size: 1.05rem;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+/* Alumni Section */
+.alumni-section {
+  background: white;
+}
+
+.alumni-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+/* Alumni Card */
+.alumni-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: var(--transition);
+}
+
+.alumni-card:hover {
+  border-color: var(--secondary);
+  transform: translateY(-12px);
+  box-shadow: 0 15px 40px rgba(124, 58, 237, 0.2);
+}
+
+/* Alumni Image */
+.alumni-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+.alumni-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.alumni-card:hover .alumni-image {
+  transform: scale(1.08);
+}
+
+/* Achievement Badge */
+.achievement-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: linear-gradient(135deg, var(--success), #34d399);
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 25px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Alumni Info */
+.alumni-info {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.alumni-card h3 {
+  color: var(--primary);
+  font-size: 1.35rem;
+  margin-bottom: 0.35rem;
+}
+
+.alumni-former-role {
+  color: var(--secondary);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+/* Achievement Box */
+.achievement-box {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(6, 182, 212, 0.1));
+  padding: 1rem;
+  border-left: 3px solid var(--secondary);
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.achievement-box h4 {
+  color: var(--primary);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.achievement-text {
+  color: var(--secondary);
+  font-weight: 600;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Alumni Fun Fact */
+.alumni-fun-fact {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.fact-icon {
+  color: var(--secondary);
+}
+
+/* LinkedIn Link */
+.linkedin-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(135deg, #0077b5, #0094d0);
+  color: white;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: var(--transition);
+  margin-bottom: 1rem;
+}
+
+.linkedin-link:hover {
+  background: linear-gradient(135deg, #0094d0, #00a8e8);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 119, 181, 0.3);
+}
+
+/* Alumni Message */
+.alumni-message {
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.05), rgba(124, 58, 237, 0.05));
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border-left: 3px solid var(--accent);
+  margin-top: auto;
+}
+
+.alumni-message p {
+  color: var(--text-light);
+  font-size: 0.85rem;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Achievements Section */
+.achievements-section {
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.05) 0%, rgba(124, 58, 237, 0.05) 100%);
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.achievement-item {
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-top: 3px solid var(--secondary);
+  transition: var(--transition);
+}
+
+.achievement-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(124, 58, 237, 0.15);
+}
+
+.achievement-item i {
+  font-size: 2.5rem;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+.achievement-item h4 {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.achievement-item p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+/* Stories Section */
+.stories-section {
+  background: white;
+}
+
+.story-card {
+  padding: 2rem;
+  border-left: 4px solid var(--secondary);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.story-card h4 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.story-card p {
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.story-author {
+  color: var(--secondary);
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Mentorship Section */
+.mentorship-section {
+  background: white;
+}
+
+.mentorship-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.mentorship-item {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.05), rgba(6, 182, 212, 0.05));
+  border-radius: 1rem;
+  border: 2px solid var(--border);
+  transition: var(--transition);
+}
+
+.mentorship-item:hover {
+  border-color: var(--secondary);
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(6, 182, 212, 0.1));
+  transform: translateY(-8px);
+}
+
+.mentorship-item i {
+  font-size: 3rem;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+.mentorship-item h4 {
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+}
+
+.mentorship-item p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: white;
+  text-align: center;
+}
+
+.cta-section h2 {
+  color: white;
+  margin-bottom: 0.75rem;
+}
+
+.cta-section p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+}
+
+/* Responsive Alumni */
+@media (max-width: 1024px) {
+  .alumni-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .alumni-image-wrapper {
+    height: 250px;
+  }
+
+  .achievements-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header h1 {
+    font-size: 2rem;
+  }
+
+  .alumni-grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .alumni-image-wrapper {
+    height: 220px;
+  }
+
+  .alumni-info {
+    padding: 1.25rem;
+  }
+
+  .alumni-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .achievement-box {
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .achievement-box h4 {
+    font-size: 0.85rem;
+  }
+
+  .achievements-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .achievement-item {
+    padding: 1.5rem;
+  }
+
+  .achievement-item i {
+    font-size: 2rem;
+  }
+
+  .achievement-item h4 {
+    font-size: 1.75rem;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .mentorship-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .mentorship-item {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .alumni-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .alumni-image-wrapper {
+    height: 180px;
+  }
+
+  .alumni-info {
+    padding: 1rem;
+  }
+
+  .alumni-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .alumni-former-role {
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .achievement-box {
+    padding: 0.65rem;
+    margin-bottom: 0.65rem;
+  }
+
+  .alumni-fun-fact {
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .linkedin-link {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .alumni-message {
+    padding: 0.75rem;
+  }
+
+  .alumni-message p {
+    font-size: 0.8rem;
+  }
+
+  .achievements-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .achievement-item {
+    padding: 1rem;
+  }
+
+  .achievement-item i {
+    font-size: 1.75rem;
+  }
+
+  .achievement-item h4 {
+    font-size: 1.5rem;
+  }
+
+  .achievement-item p {
+    font-size: 0.9rem;
+  }
+
+  .story-card {
+    padding: 1.5rem;
+  }
+
+  .story-card h4 {
+    font-size: 1.1rem;
+  }
+
+  .story-card p {
+    font-size: 0.9rem;
+  }
+
+  .mentorship-item {
+    padding: 1.25rem;
+  }
+
+  .mentorship-item i {
+    font-size: 2.25rem;
+  }
+
+  .section {
+    padding: 2rem 0;
+  }
+}
