@@ -29,7 +29,7 @@
 }
 
 .logo-gradient {
-  background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
+  background: linear-gradient(135deg, var(--accent) 0%, var(--metallic-shine) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -70,7 +70,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--secondary), var(--accent));
+  background: linear-gradient(90deg, var(--accent), var(--metallic-shine));
   transition: width 0.3s ease;
 }
 
@@ -83,7 +83,7 @@
 }
 
 .nav-btn {
-  background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
   padding: 0.5rem 1.25rem !important;
   border-radius: 25px;
   color: white !important;
@@ -95,7 +95,58 @@
 
 .nav-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4);
+  box-shadow: 0 6px 20px rgba(77, 166, 255, 0.4);
+}
+
+/* =============================================
+   CLUB BRANDING - LEFT SIDE
+   ============================================= */
+
+.nav-club-branding {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.nav-club-branding:hover .club-logo {
+  transform: rotate(10deg) scale(1.1);
+  filter: drop-shadow(0 0 10px rgba(77, 166, 255, 0.8));
+}
+
+.club-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 6px rgba(77, 166, 255, 0.5));
+  transition: var(--transition);
+}
+
+.club-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.club-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--metallic-shine) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.club-university {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.65rem;
+  font-weight: 500;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
 }
 
 /* Hamburger Menu */
@@ -141,7 +192,7 @@
 
   .nav-menu.active {
     max-height: 500px;
-    border-bottom: 2px solid var(--secondary);
+    border-bottom: 2px solid var(--accent);
   }
 
   .nav-link {
@@ -151,6 +202,23 @@
   .nav-btn {
     width: 100%;
     text-align: center;
+  }
+
+  .club-university {
+    display: none;
+  }
+
+  .club-name {
+    font-size: 0.75rem;
+  }
+
+  .club-logo {
+    width: 36px;
+    height: 36px;
+  }
+
+  .nav-club-branding {
+    gap: 0.5rem;
   }
 }
 
@@ -170,5 +238,19 @@
 
   .navbar {
     padding: 0.75rem 0;
+  }
+
+  .club-info {
+    display: none;
+  }
+
+  .nav-club-branding {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .club-logo {
+    width: 32px;
+    height: 32px;
   }
 }

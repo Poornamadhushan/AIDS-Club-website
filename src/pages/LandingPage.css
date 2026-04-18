@@ -48,7 +48,7 @@
 }
 
 .hero-title .gradient-text {
-  background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
+  background: linear-gradient(135deg, var(--accent) 0%, var(--metallic-shine) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -104,33 +104,55 @@
 .gradient-orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(40px);
-  opacity: 0.7;
+  filter: blur(50px);
+  opacity: 0.5;
 }
 
 .orb1 {
-  width: 200px;
-  height: 200px;
-  background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, var(--accent), var(--primary));
   top: 20px;
-  right: 50px;
+  right: 40px;
   animation: float 6s ease-in-out infinite;
 }
 
 .orb2 {
-  width: 150px;
-  height: 150px;
-  background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(circle, var(--metallic-shine), var(--accent));
   bottom: 30px;
-  left: 50px;
+  left: 40px;
   animation: float 8s ease-in-out infinite reverse;
 }
 
-.hero-icon {
-  font-size: 8rem;
-  color: white;
-  opacity: 0.9;
-  animation: bounce 3s ease-in-out infinite;
+/* Club Intro Video in Hero */
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+  border-radius: 1rem;
+  box-shadow:
+    0 0 30px rgba(77, 166, 255, 0.4),
+    0 0 60px rgba(26, 107, 196, 0.2);
+  animation: floatLogo 5s ease-in-out infinite;
+}
+
+.hero-video:hover {
+  box-shadow:
+    0 0 40px rgba(77, 166, 255, 0.7),
+    0 0 80px rgba(26, 107, 196, 0.4);
+}
+
+@keyframes floatLogo {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-18px);
+  }
 }
 
 @keyframes float {
@@ -157,14 +179,14 @@
 }
 
 .intro-card:hover {
-  border-color: var(--secondary);
+  border-color: var(--accent);
   transform: translateY(-15px);
-  box-shadow: 0 20px 40px rgba(124, 58, 237, 0.2);
+  box-shadow: 0 20px 40px rgba(26, 107, 196, 0.15);
 }
 
 .intro-icon {
   font-size: 3rem;
-  color: var(--secondary);
+  color: var(--primary);
   margin-bottom: 1.5rem;
   animation: bounce 2s ease-in-out infinite;
 }
@@ -182,11 +204,11 @@
 
 /* Highlights Section */
 .highlights-section {
-  background: linear-gradient(135deg, rgba(30, 58, 138, 0.05) 0%, rgba(124, 58, 237, 0.05) 100%);
+  background: linear-gradient(135deg, rgba(26, 107, 196, 0.05) 0%, rgba(77, 166, 255, 0.05) 100%);
 }
 
 .bg-gradient {
-  background: linear-gradient(135deg, rgba(30, 58, 138, 0.05) 0%, rgba(124, 58, 237, 0.05) 100%);
+  background: linear-gradient(135deg, rgba(26, 107, 196, 0.05) 0%, rgba(77, 166, 255, 0.05) 100%);
 }
 
 .highlight-item {
@@ -194,19 +216,19 @@
   padding: 2rem;
   background: white;
   border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(26, 107, 196, 0.08);
   transition: var(--transition);
 }
 
 .highlight-item:hover {
   transform: translateY(-10px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 12px 24px rgba(26, 107, 196, 0.2);
 }
 
 .highlight-number {
   font-size: 3rem;
   font-weight: 900;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -233,7 +255,7 @@
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background: linear-gradient(135deg, var(--secondary), var(--accent));
+  background: linear-gradient(135deg, var(--primary), var(--accent));
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 25px;
@@ -271,7 +293,7 @@
 }
 
 .read-more {
-  color: var(--secondary);
+  color: var(--primary);
   font-weight: 600;
   display: inline-flex;
   align-items: center;
@@ -298,7 +320,7 @@
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 3rem;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 40px rgba(26, 107, 196, 0.3);
 }
 
 .mission-content h2 {
@@ -362,6 +384,12 @@
     height: 300px;
   }
 
+  .hero-video {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.75rem;
+  }
+
   .mission-card {
     grid-template-columns: 1fr;
     padding: 2.5rem;
@@ -403,8 +431,16 @@
     justify-content: center;
   }
 
+  /* Show video centered on mobile */
   .hero-image {
-    display: none;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-video {
+    border-radius: 0.5rem;
   }
 
   .highlight-number {
@@ -465,4 +501,71 @@
   .mission-image {
     font-size: 4rem;
   }
+}
+
+/* =============================================
+   FULLSCREEN INTRO VIDEO
+   ============================================= */
+
+.intro-video-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--dark);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.8s ease;
+  opacity: 1;
+}
+
+.intro-video-wrapper.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.intro-video-fullscreen {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.skip-hint {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+  transition: var(--transition);
+}
+
+.intro-video-wrapper:hover .skip-hint {
+  color: rgba(255, 255, 255, 0.9);
+  border-color: var(--accent);
+}
+
+/* =============================================
+   MAIN CONTENT FADE IN
+   ============================================= */
+
+.main-content-wrapper {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  pointer-events: none;
+}
+
+.main-content-wrapper.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
 }

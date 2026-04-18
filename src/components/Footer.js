@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FaGithub, FaLinkedin, FaWhatsapp, FaEnvelope, FaHeart } from 'react-icons/fa';
+import clubLogo from '../AIclub3d.png';
 import './Footer.css';
 
 const Footer = () => {
@@ -9,12 +11,16 @@ const Footer = () => {
     <footer className="footer">
       <div className="container">
         <div className="grid grid-3">
+
           {/* About Section */}
           <div className="footer-section animate-fade">
-            <div className="footer-logo">
-              <span className="logo-gradient">AIDS</span>
-              <span className="logo-text">Club</span>
-            </div>
+            <Link to="/" className="footer-logo">
+              <img src={clubLogo} alt="DatAInspire Logo" className="footer-club-logo" />
+              <div className="footer-club-info">
+                <span className="footer-club-name">AI & Data Science Club</span>
+                <span className="footer-club-uni">KDU</span>
+              </div>
+            </Link>
             <p>
               Empowering students through AI and Data Science education, projects, and community building.
             </p>
@@ -35,12 +41,12 @@ const Footer = () => {
           <div className="footer-section animate-fade" style={{ animationDelay: '0.1s' }}>
             <h4>Quick Links</h4>
             <ul className="footer-links">
-              <li><a href="/">Home</a></li>
-              <li><a href="/overview">Overview</a></li>
-              <li><a href="/events">Events</a></li>
-              <li><a href="/projects">Projects</a></li>
-              <li><a href="/team">Team</a></li>
-              <li><a href="/contact">Contact</a></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/overview">Overview</Link></li>
+              <li><Link to="/events">Events</Link></li>
+              <li><Link to="/projects">Projects</Link></li>
+              <li><Link to="/team">Team</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
             </ul>
           </div>
 
@@ -55,19 +61,20 @@ const Footer = () => {
                 <FaWhatsapp /> <a href="https://wa.me/1234567890">+1 (234) 567-8900</a>
               </p>
               <p>
-                <FaHeart /> Made with passion by AIDS Club
+                <FaHeart /> Made with passion by DatAInspire
               </p>
             </div>
           </div>
+
         </div>
 
         {/* Footer Bottom */}
         <div className="footer-bottom">
           <hr className="footer-divider" />
           <p className="copyright">
-            © {currentYear} AI and Data Science Club. All rights reserved. | 
-            <a href="/">Home</a> | 
-            <a href="/contact">Contact</a>
+            © {currentYear} AI & Data Science Club — General Sir John Kotelawala Defence University. All rights reserved. |{' '}
+            <Link to="/">Home</Link> |{' '}
+            <Link to="/contact">Contact</Link>
           </p>
         </div>
       </div>

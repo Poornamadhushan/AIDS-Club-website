@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import clubLogo from '../AIclub3dnew.png';
 import './Navigation.css';
 
 const Navigation = () => {
@@ -12,14 +13,24 @@ const Navigation = () => {
 
   const handleLinkClick = () => {
     setIsOpen(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleLogoClick = () => {
+    setIsOpen(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
     <nav className="navbar">
       <div className="container nav-container">
-        <Link to="/" className="nav-logo" onClick={handleLinkClick}>
-          <span className="logo-gradient">AIDS</span>
-          <span className="logo-text">Club</span>
+        {/* Club Branding - Left Side */}
+        <Link to="/" className="nav-club-branding" onClick={handleLogoClick}>
+          <img src={clubLogo} alt="AI & Data Science Club Logo" className="club-logo" />
+          <div className="club-info">
+            <span className="club-name">AI & Data Science Club</span>
+            <span className="club-university">General Sir John Kotelawala Defence University</span>
+          </div>
         </Link>
 
         <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
