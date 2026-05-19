@@ -237,6 +237,10 @@ To use real images:
 1. Upload images to a hosting service (Cloudinary, AWS S3, etc.)
 2. Update image URLs in `membersData.js`
 
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
 ## Deployment
 
 ### Deploy to Netlify
