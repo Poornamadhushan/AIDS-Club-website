@@ -300,7 +300,7 @@ For questions or suggestions:
 
 ## License 
 
-This project is open source and available under the [MIT License](https://opensource.org/licenses/MIT).
+This project is open source and available under the [MIT License](https://github.com/Poornamadhushan/AIDS-Club-website?tab=MIT-1-ov-file).
 
 ---
 
