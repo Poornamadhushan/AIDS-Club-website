@@ -1,4 +1,4 @@
-# AI and Data Science Club Website
+
 
 A modern, responsive multi-page website for the AI and Data Science Club built with React, featuring comprehensive member profiles, event management, project showcase, and membership system.
 
