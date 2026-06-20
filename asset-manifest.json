@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/AIDS-Club-website/static/css/main.7ad83d12.css",
+    "main.js": "/AIDS-Club-website/static/js/main.382040a5.js",
+    "index.html": "/AIDS-Club-website/index.html",
+    "main.7ad83d12.css.map": "/AIDS-Club-website/static/css/main.7ad83d12.css.map",
+    "main.382040a5.js.map": "/AIDS-Club-website/static/js/main.382040a5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7ad83d12.css",
+    "static/js/main.382040a5.js"
+  ]
+}
